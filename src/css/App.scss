@@ -1,0 +1,412 @@
+@import "./Props.scss";
+@import "./Colors.scss";
+
+$mbr: 4px;
+
+.font {
+  font-family: "Open Sans", sans-serif;
+}
+body {
+  // background: #f0f2f5;
+  font-family: "Open Sans", sans-serif;
+}
+.input {
+  border: 1px solid #ddd;
+  padding: 0px 8px 0px 4px;
+  height: 40px;
+}
+.button {
+  border: 0px;
+  background: $themecolor;
+  padding: 4px 10px;
+  height: 39px;
+}
+.splash {
+  height: 400px;
+  width: 400px;
+}
+.auth {
+  background: #fff;
+  width: 300px;
+  margin: 100px auto 50px auto;
+  padding: 40px;
+  .title {
+    margin-bottom: 7px;
+  }
+  .signin {
+    margin-top: 25px;
+    .input {
+      &.phone {
+        margin-left: 7px;
+        width: 200px;
+      }
+      &.code {
+        width: 95%;
+      }
+    }
+  }
+  .captcha {
+    margin-top: 15px;
+  }
+  .button {
+    margin-top: 15px;
+    width: 100%;
+  }
+}
+.green-belt {
+  background: #00a884;
+  height: 15vh;
+}
+.messenger {
+  background: white;
+  top: 20px;
+  bottom: 20px;
+  left: 40px;
+  right: 40px;
+  border-radius: $mbr;
+
+  .inbox {
+    width: 450px;
+    border-right: 1px #ddd solid;
+    .userbox {
+      border-radius: $mbr 0px 0px 0px;
+      background: #f3f3f3;
+      .you {
+        flex: 1;
+        padding-left: 12px;
+        .user {
+          width: 35px;
+          height: 35px;
+          img {
+            height: 100%;
+            width: 100%;
+            border-radius: 50%;
+          }
+        }
+      }
+      .actions {
+        flex: 1;
+        justify-content: flex-end;
+        padding-right: 5px;
+        button {
+          width: 50px;
+          height: 50px;
+          border: 0px;
+          background: rgba(204, 204, 204, 0%);
+          margin-left: 1px;
+          color: #888;
+        }
+      }
+    }
+    .search {
+      border-top: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
+      padding: 7px 15px;
+      .sbox {
+        background: #fff;
+        border: 1px solid #eaeaea;
+        flex: 1;
+        border-radius: 5px;
+        overflow: hidden;
+        button {
+          width: 50px;
+          border: 0px;
+          background: #fff;
+          padding: 5px;
+          font-size: 22px;
+          color: #888;
+          &:hover {
+            color: #222;
+          }
+        }
+        input {
+          flex: 1;
+          border: 0px;
+        }
+      }
+    }
+    .conv-list {
+      overflow-x: hidden;
+      overflow-y: auto;
+      flex: 1;
+      height: calc(100vh-140px);
+    }
+    .conversation {
+      padding: 5px 10px;
+      .you {
+        width: 50px;
+        .user {
+          width: 35px;
+          height: 35px;
+          img {
+            height: 100%;
+            width: 100%;
+            border-radius: 50%;
+          }
+        }
+      }
+      .meta {
+        flex: 1;
+        border-bottom: 1px solid #f1f1f1;
+        padding: 0px 0px 10px 0px;
+        .info {
+          flex: 1;
+        }
+        .name {
+          .last-msg {
+            padding: 0px;
+          }
+        }
+      }
+      .extra {
+        .stamp {
+          padding: 0px;
+        }
+        .badge {
+          background: #2fc32f;
+          max-width: 32px;
+          text-align: center;
+          font-size: 12px;
+          border-radius: 40px;
+          padding: 0px 3px;
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+  .chatbox {
+    flex: 1;
+    .chathead {
+      background: #f3f3f3;
+      border-radius: 0px $mbr 0px 0px;
+      .you {
+        flex: 1;
+        padding-left: 12px;
+        .user {
+          width: 35px;
+          height: 35px;
+          img {
+            height: 100%;
+            width: 100%;
+            border-radius: 50%;
+          }
+        }
+        .meta {
+          margin-left: 10px;
+        }
+      }
+      .actions {
+        flex: 1;
+        justify-content: flex-end;
+        padding-right: 5px;
+        button {
+          width: 50px;
+          height: 50px;
+          border: 0px;
+          background: rgba(204, 204, 204, 0%);
+          margin-left: 1px;
+          color: #888;
+        }
+      }
+    }
+    .chat {
+      border-top: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
+      flex: 1;
+      background: #e4dbd4;
+      padding: 20px 30px;
+      overflow-x: hidden;
+      overflow-y: auto;
+      .bubble {
+        // flex: 1;
+        margin: 3px 0px;
+        .ballon {
+          background: #fff;
+          display: table;
+          padding: 4px 6px;
+          border-radius: 8px;
+          max-width: 400px;
+          min-width: 100px;
+          .stamp {
+            bottom: 7px;
+            right: 7px;
+            &.cfff {
+              text-shadow: 1px 1px 1px #000;
+              bottom: 12px;
+              right: 12px;
+            }
+          }
+          .text {
+            padding: 4px 0px;
+            margin-bottom: 20px;
+          }
+          .media {
+            width: 400px;
+            height: 220px;
+            border-radius: 5px;
+            padding: 2px 0px;
+            margin: 3px 0px;
+            &.audio {
+              height: auto !important;
+              .audioplayer {
+                .pp {
+                  border: 0px;
+                  width: 30px;
+                  height: 30px;
+                  border-radius: 30px;
+                  background: rgba(255, 255, 255, 0);
+                  display: flex;
+                  align-items: center;
+                }
+                .ctrls {
+                  flex: 1;
+                  padding: 0px 10px;
+                  .slider {
+                    height: 4px;
+                    background: #ddd;
+                    .knob {
+                      width: 12px;
+                      height: 12px;
+                      background: $themecolor;
+                      border-radius: 20px;
+                      left: 0px;
+                    }
+                  }
+                  .extra {
+                    bottom: -8px;
+                    left: 40px;
+                    right: 40px;
+                    .dur {
+                      flex: 1;
+                    }
+                    .stmp {
+                      flex: 1;
+                      justify-content: flex-end;
+                      text-align: right;
+                    }
+                  }
+                }
+                .udp {
+                  width: 30px;
+                  height: 30px;
+                  background: #f1f1f1;
+                  border-radius: 50%;
+                  overflow: hidden;
+                  img {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 50%;
+                  }
+                }
+              }
+            }
+            .poster {
+              max-width: 100%;
+              height: 100%;
+              background-color: #f1f1f1;
+              background-size: cover !important;
+              border-radius: 5px;
+              overflow: hidden;
+              .photo {
+                max-width: 100%;
+                height: 100%;
+                background-color: #f1f1f1;
+                background-size: cover !important;
+                border-radius: 5px;
+              }
+            }
+            &.video {
+              .photo {
+                @include blur($amt: 2px);
+              }
+              .pp {
+                border: 2px solid #fff;
+                background: rgba(0, 0, 0, 0.5);
+                color: #fff;
+                width: 40px;
+                height: 40px;
+                border-radius: 20px;
+                display: flex;
+                align-items: center;
+              }
+            }
+          }
+          &::before {
+            content: "";
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            left: -10px;
+            bottom: 4px;
+            z-index: 1;
+            background: #fff;
+            border-radius: 20px;
+          }
+          &::after {
+            content: "";
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            left: -15px;
+            bottom: 9px;
+            z-index: 1;
+            background: #e4dbd4;
+            border-radius: 20px;
+          }
+        }
+        &.mine {
+          justify-content: flex-end;
+          .ballon {
+            background: #d9fdd3;
+            padding: 4px 6px;
+            &::before {
+              content: "";
+              position: absolute;
+              width: 15px;
+              height: 15px;
+              left: auto;
+              right: -10px;
+              bottom: 4px;
+              z-index: 1;
+              background: #d9fdd3;
+              border-radius: 20px;
+            }
+            &::after {
+              content: "";
+              position: absolute;
+              width: 15px;
+              height: 15px;
+              left: auto;
+              right: -15px;
+              bottom: 9px;
+              z-index: 1;
+              background: #e4dbd4;
+              border-radius: 20px;
+            }
+          }
+        }
+      }
+    }
+    .sendbox {
+      background: #f3f3f3;
+      padding: 10px;
+      border-radius: 0px 0px $mbr 0px;
+      button {
+        height: 45px;
+        width: 45px;
+        border: 0px;
+        background: rgba(0, 0, 0, 0);
+        color: #888;
+      }
+      .new-message {
+        flex: 1;
+        border: 0px;
+        margin: 0px 10px;
+        border-radius: 5px;
+        padding: 10px;
+        height: 40px;
+        resize: none;
+      }
+    }
+  }
+}
