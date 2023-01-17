@@ -56,10 +56,11 @@ export default function ChatSendBox() {
     fetching();
   }, []);
   // ----------------------Fetching and Synching---------------------
-
   const sendData = (evt) => {
     if (evt.key === "Enter") {
-      sending();
+      if (msg.length > 1) {
+        sending();
+      }
       setMsg("");
     }
   };
@@ -72,8 +73,10 @@ export default function ChatSendBox() {
         className={`new-message s14 font`}
         placeholder={`type a message`}
         value={msg}
-        onChange={(evt) => setMsg(evt.target.value)}
-        onKeyDown={sendData}
+        onChange={(evt) => {
+          setMsg(evt.target.value);
+        }}
+        onKeyUp={sendData}
       />
       <button className={`s24`}>
         <MicIcon />
